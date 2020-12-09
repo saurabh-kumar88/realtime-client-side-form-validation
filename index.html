@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css"></style>
+</head>
+<body>
+    <div class="container">
+        <form id="registration">
+            <h1>Real time client side form validation</h1>
+    
+            <label for="username">
+                <span>Username</span>
+                
+                <input type="text" id="username"  required>
+                
+                <ul class="input-requirements">
+                    <li>At least 5 characters long</li>
+                    <li>Must only contain letters and numbers (no special characters)</li>
+                </ul>
+            </label>
+
+            <label for="password">
+                <span>password</span>
+                
+                <input type="password" id="password" required>
+                
+                <ul class="input-requirements">
+                    <li>At least 8 characters long (and less than 100 characters)</li>
+					<li>Contains at least 1 number</li>
+					<li>Contains at least 1 lowercase letter</li>
+					<li>Contains at least 1 uppercase letter</li>
+					<li>Contains a special character (e.g. @ !)</li>
+                </ul>
+            </label>
+
+            <label for="re-password">
+                <span>password</span>
+                
+                <input type="password" id="re-password" required>
+                <ul class="input-requirements">
+                    <li>Password matched</li>
+                </ul>
+            </label>
+            <br>
+            <input id="submit-btn" type="submit" >
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
